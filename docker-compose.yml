@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  ubuntu:
+    image: jrcasso/infrastructure:1.1.0
+    volumes:
+      - ${KUBECONFIG}:/root/.kube/config
+      - ~/.aws/:/root/.aws/:ro
+      - ~/.ssh/:/root/.ssh/:ro
