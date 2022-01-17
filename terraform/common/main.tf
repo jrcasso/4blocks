@@ -31,5 +31,5 @@ resource "aws_route53_record" "elb_dns" {
   name    = "4blocks.${var.operation}.${var.organization}.com."
   type    = "CNAME"
   ttl     = "60"
-  records = ["aee447eb5236f4e6c967260acfedbf3c-1435398619.us-east-1.elb.amazonaws.com"]
+  records = [var.elb_dns_name]
 }
